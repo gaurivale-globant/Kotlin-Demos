@@ -1,13 +1,36 @@
 package com.globant.java;
 
-public class Student {
-    private final String name;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-    public Student(String name) {
-        this.name = name;
+public class Student {
+    private final String firstName;
+    private final String lastName;
+
+    private String id;
+
+    public Student(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public @NotNull String getName() {
+        return firstName + " " + lastName;
+    }
+
+    public @Nullable String getId() {
+        return id;
+    }
+
+    public void setId(@Nullable String id) {
+        this.id = id;
     }
 }
