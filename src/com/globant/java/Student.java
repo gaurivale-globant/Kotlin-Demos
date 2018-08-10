@@ -30,7 +30,7 @@ public class Student {
         return id;
     }
 
-    public void setId(@Nullable String id) {
+    public void setId(@NotNull String id) {
         this.id = id;
     }
 }

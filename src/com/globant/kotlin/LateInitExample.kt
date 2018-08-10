@@ -20,10 +20,12 @@ class MyTest/*(lateinit var a: MyService)*/ {
         nullableLabel = ""
     }
 
+    //@Before
     fun setUp() {
         myService = MyService()
     }
 
+    //@Test
     fun testAction() {
         println(myService.performAction())
     }
@@ -31,5 +33,6 @@ class MyTest/*(lateinit var a: MyService)*/ {
 
 fun main(args: Array<String>) {
     var test: MyTest = MyTest()
+    //test.setUp()
     test.testAction()
 }
